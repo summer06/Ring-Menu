@@ -249,8 +249,8 @@ div#button:hover div#info-bar {
 	opacity: 1;
 }
 div#button:hover ul.complex {
-	height: 100px;
-	width: 100px;
+	height: 120px;
+	width: 120px;
 	padding: 20px 20px 20px 20px;
-	transform: translate(-50px, -170px);
+	transform: translate(-60px, -200px);
 }
