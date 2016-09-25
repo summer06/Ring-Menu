@@ -1,3 +1,4 @@
+/*----------main layout----------*/
 body {
     position: absolute;
     left: 0;
@@ -35,17 +36,13 @@ div#button {
 }
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
+/*----------at-plus----------*/
 
 div.apb {
     position: absolute;
-    width: 35px;
-    height: 35px;
-}
-
-div.icon {
     width: 35px;
     height: 35px;
     background-color: gray;
@@ -55,27 +52,30 @@ div.icon {
     transition-duration: 0.5s;
 }
 
-img.green {
-    opacity: 0;
-    width: 30px;
-    position: absolute;
-    top: 7px;
-    right: 1px;
+div.icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("assets/images/atplus_white.png");
     transition-property: all;
     transition-delay: 0.5s;
     transition-duration: 0.5s;
 }
 
-img.white {
-    width: 30px;
-    position: absolute;
-    right: 1px;
-    top: 7px;
-    transition-property: all;
-    transition-delay: 0.5s;
-    transition-duration: 0.5s
+div#button:hover div.apb {
+    transform: scale(2);
+    background-color: rgba(48,63,159,1);
+    transition: all 0.5s;
 }
 
+div#button:hover div.icon {
+    background-image: url("assets/images/atplus_green.png");
+    transition: all 0.1s;
+}
+/*----------info-bar----------*/
 
 div#info-bar {
     width: 35px;
@@ -84,6 +84,10 @@ div#info-bar {
     opacity: 0; 
     transition-property: all; 
     transition-duration: 1s;
+}
+
+div#button:hover div#info-bar {
+    opacity: 1;
 }
 
 div.info {
@@ -106,6 +110,13 @@ ul.complex {
     transition-property: all; 
     transition-duration: 1s;
     overflow: hidden;
+}
+
+div#button:hover ul.complex {
+    height: 120px;
+    width: 120px;
+    padding: 20px 20px 20px 20px;
+    transform: translate(-60px, -200px);
 }
 
 ul.complex li {
@@ -146,6 +157,7 @@ li.mine.like span {
 	color: #079E6E;
 }
 
+/*----------control-ring----------*/
 
 div#control-ring-container {
     position: absolute;
@@ -154,6 +166,10 @@ div#control-ring-container {
     opacity: 0;
     transition-property: all; 
     transition-duration: 1s;
+}
+
+div#button:hover div#control-ring-container {
+    opacity: 1;
 }
 
 ul#control-ring {
@@ -177,12 +193,40 @@ ul#control-ring li {
     transition-duration: 1s;
 }
 
+div#button:hover li.mask{
+    transform: translate(-80px, -50px);
+}
+div#button:hover li.history {
+    transform: translate(-95px, 5px);
+}
+div#button:hover li.message {
+    transform: translate(-80px, 55px);
+}
+div#button:hover li.setting {
+    transform: translate(-30px, 85px);
+}
+div#button:hover li.sign {
+    transform: translate(28px, 80px);
+}
+
 ul#control-ring li img {
     opacity: 0;
 }
 
+div#button:hover ul#control-ring li img {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s; 
+}
+
 ul#control-ring li.message span {
     opacity: 0;
+}
+
+div#button:hover ul#control-ring li.message span {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
 }
 
 li.button img {
@@ -200,57 +244,4 @@ span.unread {
     position: absolute;
     right: -7px;
     bottom: 25px;
-}
-
-
-div#button:hover div.apb>div.icon {
-    transform: scale(2);
-    background-color: rgba(48,63,159,1);
-    transition: all .5s;
-}
-div#button:hover div.apb>div.icon img.green {
-	opacity: 1;
-    transform: scale(0.9);
-    transition: opacity 0.1s, transform 0.5s;
-}
-div#button:hover div.apb>div.icon img.white {
-    opacity: 0;
-    transition: opacity 0.1s;
-}
-div#button:hover div#control-ring-container {
-	opacity: 1;
-}
-div#button:hover ul#control-ring li img {
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 1s; 
-}
-div#button:hover ul#control-ring li.message span {
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 1s;
-}
-div#button:hover li.mask{
-	transform: translate(-80px, -40px);
-}
-div#button:hover li.history {
-	transform: translate(-95px, 5px);
-}
-div#button:hover li.message {
-	transform: translate(-70px, 50px);
-}
-div#button:hover li.setting {
-	transform: translate(-20px, 75px);
-}
-div#button:hover li.sign {
-	transform: translate(35px, 70px);
-}
-div#button:hover div#info-bar {
-	opacity: 1;
-}
-div#button:hover ul.complex {
-	height: 120px;
-	width: 120px;
-	padding: 20px 20px 20px 20px;
-	transform: translate(-60px, -200px);
 }
