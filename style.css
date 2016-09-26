@@ -25,13 +25,12 @@ div#bottom-positioner {
 }
 
 div#button {
-    position: relative;
-    top: 750px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
     text-align: center;
     width: 35px;
     height: 35px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 50%;
 }
 
@@ -45,10 +44,10 @@ div.apb {
     position: absolute;
     width: 35px;
     height: 35px;
-    background-color: gray;
+    background-color: #959cd2;
     border-radius: 50%;
     transition-property: all;
-    transition-delay: 0.5s;
+    transition-delay: 0.7s;
     transition-duration: 0.5s;
 }
 
@@ -83,6 +82,7 @@ div#info-bar {
     position: absolute;
     opacity: 0; 
     transition-property: all; 
+    /*transition-delay: 0.5s;*/
     transition-duration: 1s;
 }
 
@@ -96,7 +96,7 @@ div.info {
     height: 35px;
 }
 
-ul.complex {
+div.info > ul {
     height: 35px;
     width: 35px;
     padding-left: 0;
@@ -105,56 +105,54 @@ ul.complex {
     border-radius: 50%;
     text-align: center;
     color: white;
-    background-color: gray;
+    background-color: #7e7e7e;
     position: absolute;
     transition-property: all; 
     transition-duration: 1s;
     overflow: hidden;
 }
 
-div#button:hover ul.complex {
+div#button:hover div.info > ul {
     height: 120px;
     width: 120px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     transform: translate(-60px, -200px);
 }
 
-ul.complex li {
+div.info > ul li {
 	position: relative;
 	font-family: cursive;
 }
 
+div.info > ul li span {
+    padding-left: 10px;
+    position: relative;
+}
+
 li.mine {
-	display: inline;
+	display: inline-block;
+    padding-top: 10px;
 }
 
 li.page.user span {
-	padding-left: 10px;
-	position: relative;
 	bottom: 5px;
 	font-size: 20px;
 }
 
 li.page.comment span {
-	padding-left: 10px;
-	position: relative;
 	font-size: 30px;
 }
 
 li.mine.posted span {
-	padding-left: 10px;
-	position: relative;
 	bottom: 5px;
 	font-size: 18px;
-	color: #079E6E;
+	color: #3dd49c;
 }
 
 li.mine.like span {
-	padding-left: 10px;
-	position: relative;
 	bottom: 5px;
 	font-size: 18px;
-	color: #079E6E;
+	color: #3dd49c;
 }
 
 /*----------control-ring----------*/
@@ -187,7 +185,7 @@ ul#control-ring li {
 	display: flex;
 	width: 40px;
 	height: 40px;
-	background-color: gray;
+	background-color: #7e7e7e;
 	border-radius: 50%;
     transition-property: all; 
     transition-duration: 1s;
